@@ -1,0 +1,72 @@
+
+*,
+::after,
+::before{
+   box-sizing: border-box;
+}
+
+
+body {
+   background-color: #2a2c47;
+   perspective: 700px;
+   height: 100vh;
+}
+.container{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) rotateX(
+   338deg) rotateY(
+   45deg) rotateZ(
+   2deg);
+   width: 306px;
+   height: 306px;
+   transform-style: preserve-3d;
+   
+}
+
+
+
+.item{
+   width: 300px;
+   height: 300px;
+   font-size: 50px;
+   line-height: 300px;
+   text-align: center;
+   border: 2px solid rgba(7, 62, 201, 0.211);
+   position: absolute;
+}
+
+.front{
+   transform: translate3d(0,0,150px);
+   background: rgb(5, 194, 236);}
+.back{
+   background: rgb(5, 194, 236);   transform: translate3d(0,0,-150px) rotateY(180deg);
+}
+.left{
+   transform: translate3d(-150px,0,0) rotateY(-90deg);
+   background: rgb(5, 194, 236);}
+.right{
+   transform: translate3d(150px,0,0) rotateY(90deg);
+   background: rgb(5, 194, 236);}
+.top{
+   width: 300px;
+   height: 300px;
+   transform: translate(0px, -150px) rotateX(
+   90deg);
+   background: rgb(5, 194, 236);
+}
+
+.bottom{
+   transform: translateY(150px) rotateX(
+   90deg);
+   background: rgb(5, 194, 236);}
+.top:hover{
+   height: 300px;
+   animation: infinite;
+   animation-name: cubik;
+   transition: all 1s ease;
+}
+
+
+
